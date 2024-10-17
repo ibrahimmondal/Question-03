@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          backgroundImage: {
+            "hero-pattern": "url('/img/image.png')",
+          },
+          boxShadow: {
+            box: "8px 8px 0px 0px rgba(255, 255, 255)",
+            boxone: "0 0 1rem rgba(0, 238, 255)",
+            "box-hover": "-8px -8px 0px 0px rgba(255, 255, 255)",
+          },
+          colors: {
+            "text-color": "#828FA6",
+            "p-color": "#828FA6",
+            "primery-color": "#3660CC",
+            "secondary-color": "#3c4d6d",
+            "border-color": "#3660cc",
+            "footer-text-color": "#8A8A8A",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="flex justify-center h-full items-center ">
+    <section class="">
+        <div class="justify-between flex md:flex-row flex-col">
+          <div class="bg-primery-color py-7 px-9">
+            <h1 class="text-white text-3xl font-semibold">Make an Appointment</h1>
+            <div class="border-b-2 w-[228px] mt-3 border-white"></div>
+            <div>
+              <form accept-charset="UTF-8"
+              action="https://formspree.io/f/xvgooddz"
+  method="POST">
+                  <!-- name -->
+                  <div class="flex justify-between flex-col md:flex md:flex-row gap-4 py-6">
+                    <div>
+                      <label for="name" class="text-white pt-8 pb-0">Your Name</label>
+                      <input type="text" name="First_name" class="h-8 w-full" />
+                    </div>
+                    <!-- email -->
+                    <div>
+                        <label for="name" class="text-white pt-8 pb-0">Your last Name</label>
+                      <input
+                        type="text"
+                        name="last_name"
+                        class="h-8 w-full"
+                      />
+                    </div>
+                  </div>
+                   <!-- email -->
+                    <div class="flex gap-4 py-4">
+                        <div>
+                            <label for="email" class="text-white pt-8 pb-0">Your email</label>
+                            <input type="email" name="email" class="h-8  w-full"/>
+                          </div>
+                          <div>
+                            <label for="number" class="text-white pt-8 pb-0">Your Phone</label> 
+                            <input type="number" name="phone" class="h-8  w-full"/>
+                          </div>
+                    </div>
+                  <!-- phone -->
+                  <div class="flex gap-4  py-4">
+                    <!-- date  -->
+                    <div>
+                      <label for="date" class="text-white pt-8 pb-0">Reservation Date</label>
+                      <input type="date" id="date" name="date" class="h-8  w-full text-p-color p-2"/>
+                    </div>
+                    <div>  
+                        <label for="time" class="text-white pt-8 pb-0">Reservation Time</label>
+                        <input type="time" name="time" class="h-8 w-full text-p-color p-2"/>
+                      </div>
+                  </div>
+                  <!-- dropdown -->
+                  <div class="flex flex-col gap-4">
+                    <div>
+                        <label for="text" class="text-white pt-8 pb-0">How many person will be with</label>
+                        <input type="text" class="h-8 w-full text-p-color p-2 " name="message">
+                    </div>
+                    <div>
+                        <label for="textarea" class="text-white  pb-0">Notes</label>
+                        <textarea name="your_message" id="text" class="h-8 w-full text-p-color p-2 resize-none" row="10"></textarea>
+                    </div>
+                    <!-- submit -->
+            <button type="submit"
+            class="bg-secondary-color w-[100%] mt-11 py-3 text-white hover:bg-white hover:text-black transition ease-out duration-500">Request Appointment</button>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+</body>
+</html>
